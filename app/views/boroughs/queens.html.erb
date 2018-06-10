@@ -1,2 +1,5 @@
 <h1>Boroughs#queens</h1>
-<p>Find me in app/views/boroughs/queens.html.erb</p>
+
+<% content_for :javascript_includes do %>
+  <%= javascript_include_tag "queens.js" %>
+<% end %>

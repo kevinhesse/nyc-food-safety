@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'rating/index'
   get 'main_page/index'
   get 'bronx/index'
+  
   root 'home#index'
   
 
