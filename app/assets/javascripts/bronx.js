@@ -22,18 +22,19 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
             let data = response.data
             let allData = []
 
+            let body = document.querySelector("body")
+            let ul = document.createElement("ul")
+            let name = document.createElement("li")
+            let boro = document.createElement("li")
+            let critical = document.createElement("li")
+            let score = document.createElement("li")
+            let street = document.createElement("li")
+            let violation = document.createElement("li")
+            let zipcode = document.createElement("li")
+            let grade = document.createElement("li")
+            
             for (let x = 0; x < data.length; x++) {
-                let body = document.querySelector("body")
-                let ul = document.createElement("ul")
-                let name = document.createElement("li")
-                let boro = document.createElement("li")
-                let critical = document.createElement("li")
-                let score = document.createElement("li")
-                let street = document.createElement("li")
-                let violation = document.createElement("li")
-                let zipcode = document.createElement("li")
-                let grade = document.createElement("li")
-
+                
                 let resturant = new Resturant(
                     data[x].dba,
                     data[x].boro,
@@ -68,26 +69,39 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
 
                 // console.log (fullAddress)
                 }
-
-                
-
                
-                let notCriticalCount = 0;
-                let criticalCount = 0;
-                if (data[x].critical_flag == "Not Critical") { 
-                    notCriticalCount += 1;
-                    
-
-                } else if (data[x].critical_flag == "Critical") { 
-                    criticalCount += 1;
-                    
-                }
-                console.log(criticalCount)
+                
             }
                 
             
             
             
-        })
+        function criticalCounter() {
+            let notCriticalCount = 0;
+            let criticalCount = 0;
+            let otherCount = 0;
 
+        for (let x = 0; x < data.length; x++) {
+
+            if (data[x].critical_flag == "Not Critical") { 
+             notCriticalCount += 1;
+                
+
+            } else if (data[x].critical_flag == "Critical") { 
+             criticalCount += 1;
+                
+            }else if (data[x].critical_flag != "Critical" || "NotCritical" ){
+                otherCount += 1
+            }
+            
+        }
+        console.log(criticalCount)
+        console.log(notCriticalCount)
+        console.log(otherCount)
+    }
+        console.log(criticalCounter())
+
+
+    })
+    
 })
