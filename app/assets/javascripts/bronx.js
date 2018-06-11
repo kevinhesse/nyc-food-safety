@@ -25,15 +25,37 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
       gradeCounter();
 
       let body = document.querySelector("body")
+
+      let div = document.createElement("div")
+      div.setAttribute("class", "card")
+
       let ul = document.createElement("ul")
+      ul.setAttribute("class", "list-group list-group-flush")
+
       let name = document.createElement("li")
+      name.setAttribute("class", "list-group list-group-item")
+
       let boro = document.createElement("li")
+      boro.setAttribute("class", "list-group list-group-item")
+      
       let critical = document.createElement("li")
+      critical.setAttribute("class", "list-group list-group-item")
+
       let score = document.createElement("li")
+      score.setAttribute("class", "list-group list-group-item")
+
       let street = document.createElement("li")
+      street.setAttribute("class", "list-group list-group-item")
+
       let violation = document.createElement("li")
+      violation.setAttribute("class", "list-group list-group-item")
+
       let zipcode = document.createElement("li")
+      zipcode.setAttribute("class", "list-group list-group-item")
+
       let grade = document.createElement("li")
+      grade.setAttribute("class", "list-group list-group-item")
+
 
       for (let x = 0; x < data.length; x++) {
 
@@ -49,7 +71,7 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
         )
 
         // ul.innerHTML = 
-        name.innerHTML = "Name: " + resturant.name
+        name.innerHTML = "Name: THIS IS ONLY BRONX" + resturant.name
         let fullAddress = street.innerHTML = "Address: " + resturant.street + " " + resturant.boro + " " + resturant.zipcode
         critical.innerHTML = "Critical: " + resturant.critical
         score.innerHTML = "Score: " + resturant.score
@@ -67,7 +89,8 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
           ul.appendChild(score)
           ul.appendChild(violation)
 
-          body.appendChild(ul)
+          div.appendChild(ul)
+          body.appendChild(div)
 
         }
 
@@ -112,6 +135,8 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
         let noCurrentGrade = 0;
 
       let body = document.querySelector("body")
+      let div = document.createElement("div")
+      // correct? ^
       let ul = document.createElement("ul")
       let a = document.createElement("li")
       let b = document.createElement("li")
@@ -156,24 +181,24 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
         let currentHighestScore = 0;
       
       for (let x = 0; x < data.length; x++) {
-        
+        // something is wrong here i need it to only return one score, it does many
         if (data[x].score > currentHighestScore) {
           currentHighestScore = data[x].score
-          console.log(data[x].dba)
+          return data[x].dba
         }
         
+        console.log(currentHighestScore + "this should be high")
       }
-      // console.log(currentHighestScore)
     }
     
     console.log(highestScore())
     
-    // finds restaurants with perfect inspection results
 
+    // finds restaurants with perfect inspection results
     function perfectScore() {
       let perfectScoreName = "";
       let perfectScore = 0;
-      let 
+       
       
       for (let x = 0; x < data.length; x++) {
         if (data[x].score < 0 && data[x].score == "A") {
@@ -188,9 +213,35 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
     }
     perfectScore();
 
+    
+    function roachesFound() {
+      let nameWhereRoachesFound = ""
+      
+      for (let x = 0; x < data.length; x++) {
+        if (data[x].violation_code == "04M") { 
+          nameWhereRoachesFound = data[x].dba;
+        }
+        console.log(nameWhereRoachesFound + " has roaches")
+      }
+    }
+    roachesFound();
 
+    function evidenceOfMiceFound() {
+      let nameWhereMiceFound = ""
 
-  
+      for (let x = 0; x < data.length; x ++) { 
+        if (data[x].violation_code == "04L") {
+          nameWhereMiceFound = data[x].dba;
+        }
+        console.log(nameWhereMiceFound + "has mice")
+      }
+    }
+    evidenceOfMiceFound()
 
     
+    
+    
+    
+    
+  })
 })

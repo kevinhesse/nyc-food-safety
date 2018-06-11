@@ -1,6 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
 
+
     class Resturant {
         constructor(name, boro, critical, score, street, violation, zipcode,grade) {
             this.name = name
@@ -46,7 +47,7 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
                 )
 
                 // ul.innerHTML = 
-                name.innerHTML = "Name: " + resturant.name
+                name.innerHTML = "Name: THIS IS ONLY STATENISLAND " + resturant.name
                 street.innerHTML = "Address: " + resturant.street + " " + resturant.boro + " " + resturant.zipcode 
                 critical.innerHTML = "Critical: " + resturant.critical
                 score.innerHTML = "Score: " + resturant.score

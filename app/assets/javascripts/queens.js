@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
                 )
 
                 // ul.innerHTML = 
-                name.innerHTML = "Name: " + resturant.name
+                name.innerHTML = "Name: THIS IS ONLY QUEENS" + resturant.name
                 street.innerHTML = "Address: " + resturant.street + " " + resturant.boro + " " + resturant.zipcode 
                 critical.innerHTML = "Critical: " + resturant.critical
                 score.innerHTML = "Score: " + resturant.score
