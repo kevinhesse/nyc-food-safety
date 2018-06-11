@@ -14,7 +14,29 @@
  *= require_self
  */
 
+ li {
+    font-size: 10px;
+    list-style-type: none;
+ }
  .boro-header { 
-    text-align: center;
+    text-align: center; 
     
  }
+
+ .navbar-dark .navbar-brand { 
+     background-color: black;
+    font-family: 'Zilla Slab Highlight', cursive;   
+    /* text: ; */
+    font-size: 6vw;
+ }
+
+ .list-group-item {
+ background-color: lightgrey; 
+ font-size: 12px;
+ }
+
+ a {
+    font-family: 'permanent marker',cursive;
+    color: black;
+ }
+

@@ -16,7 +16,9 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
     }
 
     let ul = document.createElement("ul")
-
+    let divQueens = document.getElementById("statenisland")
+    if (divQueens != null) {
+        alert('statenisland only')
     axios.get('https://data.cityofnewyork.us/resource/9w7m-hzhe.json')
         .then((response) => {
 
@@ -56,7 +58,7 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
                 // zipcode.innerHTML = "Zipcode: " + resturant.zipcode
                 
 
-                if (data[x].boro == "STATENISLAND") { 
+                if (data[x].boro == "STATEN ISLAND") { 
                 
                 ul.appendChild(grade)
                 ul.appendChild(name)
@@ -73,5 +75,6 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
 
             }
         })
+    }
 
 })

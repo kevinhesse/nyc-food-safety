@@ -15,12 +15,17 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
     }
 
     let ul = document.createElement("ul")
-
+    let divQueens = document.getElementById("queens")
+    if (divQueens != null) {
+    
     axios.get('https://data.cityofnewyork.us/resource/9w7m-hzhe.json')
-        .then((response) => {
+    .then((response) => {
 
             let data = response.data
             let allData = []
+
+
+                alert('queens only')
 
             for (let x = 0; x < data.length; x++) {
                 let body = document.querySelector("body")
@@ -46,7 +51,7 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
                 )
 
                 // ul.innerHTML = 
-                name.innerHTML = "Name: THIS IS ONLY QUEENS" + resturant.name
+                name.innerHTML = "Name:" + resturant.name
                 street.innerHTML = "Address: " + resturant.street + " " + resturant.boro + " " + resturant.zipcode 
                 critical.innerHTML = "Critical: " + resturant.critical
                 score.innerHTML = "Score: " + resturant.score
@@ -64,13 +69,15 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
                 ul.appendChild(score)
                 ul.appendChild(violation)
             
-                body.appendChild(ul)
+                body.appendChild(divQueens)
+                divQueens.appendChild(ul)
+
 
                 // console.log (data[x])
                 }
 
-
             }
         })
-
+        
+    }
 })

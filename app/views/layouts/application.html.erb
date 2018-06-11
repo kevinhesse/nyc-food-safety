@@ -5,19 +5,21 @@
     <title>FoodGrade</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%# google font links below %>
     <%# bootstrap link below %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= yield :javascript_includes %>
-
+    <link href="//fonts.googleapis.com/css?family=Black+Ops+One|Bowlby+One+SC|Ceviche+One|Creepster|Faster+One|Frijole|Londrina+Outline|Montserrat+Subrayada|Ruslan+Display|Shojumaru|Zilla+Slab+Highlight|" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
   </head>
 
   <body>
 
 <%# navbar %>
 <nav class="navbar navbar-dark bg-dark justify-content-center">
-  <a class="text-center navbar-brand" href="#">NYC Food Saftey Ratings</a>
+  <a class="text-center navbar-brand" href="#">NYC FOOD SAFETY RATINGS</a>
 </nav>
 <%# secondary navbar %>
 <nav class="nav nav-pills nav-fill nav-light bg-light">
@@ -27,6 +29,15 @@
   <a class="nav-item nav-link" href="/bronx">Bronx</a>
   <a class="nav-item nav-link" href="/statenisland">Staten Island</a>
 </nav>
+
+<%# <div class="card bg-dark text-white">
+  <img class="card-img" src="sykline-bar.jpeg" alt="Card image">
+  <div class="card-img-overlay">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Search by zipcode to see current health inspection details</p>
+    <p class="card-text">Information updated Daily</p>
+  </div>
+</div> %>
 
 
 
@@ -44,4 +55,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
+<footer>
+<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+</footer>
 </html>

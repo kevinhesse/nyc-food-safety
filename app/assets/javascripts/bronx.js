@@ -1,6 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
 
+
   
   class Resturant {
     constructor(name, boro, critical, score, street, violation, zipcode, grade) {
@@ -16,7 +17,9 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
   }
 
   let ul = document.createElement("ul")
-
+  let divQueens = document.getElementById("bronx")
+  if (divQueens != null) {
+    alert('bronx only')
   axios.get('https://data.cityofnewyork.us/resource/9w7m-hzhe.json')
     .then((response) => {
 
@@ -71,7 +74,7 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
         )
 
         // ul.innerHTML = 
-        name.innerHTML = "Name: THIS IS ONLY BRONX" + resturant.name
+        name.innerHTML = "Name: " + resturant.name
         let fullAddress = street.innerHTML = "Address: " + resturant.street + " " + resturant.boro + " " + resturant.zipcode
         critical.innerHTML = "Critical: " + resturant.critical
         score.innerHTML = "Score: " + resturant.score
@@ -244,4 +247,5 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
     
     
   })
+}
 })
