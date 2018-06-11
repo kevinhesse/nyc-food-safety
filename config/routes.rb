@@ -3,11 +3,11 @@ Rails.application.routes.draw do
   get 'boroughs/queens'
   get 'boroughs/bronx'
   get 'boroughs/brooklyn'
-  get 'boroughs/staten-island'
+  get 'boroughs/statenisland'
   get 'rating/index'
   get 'main_page/index'
   get 'bronx/index'
-  
+
   root 'home#index'
   
 

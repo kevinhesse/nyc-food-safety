@@ -1,6 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
-gradeCounter();
+
+  
   class Resturant {
     constructor(name, boro, critical, score, street, violation, zipcode, grade) {
       this.name = name
@@ -21,6 +22,7 @@ gradeCounter();
 
       let data = response.data
       let allData = []
+      gradeCounter();
 
       let body = document.querySelector("body")
       let ul = document.createElement("ul")
@@ -103,6 +105,7 @@ gradeCounter();
 
 
       function gradeCounter() {
+
         let gradeA = 0;
         let gradeB = 0;
         let gradeC = 0;
@@ -147,23 +150,47 @@ gradeCounter();
 
       console.log(gradeCounter())
 
+      // calculates what restaurant got the worst score, this means the highest 
       function highestScore() {
+        let highestScoreByName = ""; 
         let currentHighestScore = 0;
       
       for (let x = 0; x < data.length; x++) {
         
         if (data[x].score > currentHighestScore) {
           currentHighestScore = data[x].score
+          console.log(data[x].dba)
         }
         
       }
-      console.log(currentHighestScore)
+      // console.log(currentHighestScore)
     }
     
     console.log(highestScore())
     
+    // finds restaurants with perfect inspection results
 
-  })
+    function perfectScore() {
+      let perfectScoreName = "";
+      let perfectScore = 0;
+      let 
+      
+      for (let x = 0; x < data.length; x++) {
+        if (data[x].score < 0 && data[x].score == "A") {
+        perfectScoreName = data[x].dba; 
+        perfectScore = data[x].score;
+        } 
+      }
+
+      console.log(perfectScoreName);
+      console.log(perfectScore);
+      
+    }
+    perfectScore();
+
+
+
+  
 
     
 })
