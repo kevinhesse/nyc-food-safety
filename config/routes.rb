@@ -4,13 +4,14 @@ Rails.application.routes.draw do
   get 'animals/flys'
   # get 'boroughs/manhatten' to 'manhatten' 
   get 'boroughs/manhatten', to: "boroughs#manhatten", as: "manhatten"
-  get 'boroughs/queens'
-  get 'boroughs/bronx'
-  get 'boroughs/brooklyn'
-  get 'boroughs/statenisland'
+  get 'boroughs/queens', to: "boroughs#queens", as: "queens"
+  get 'boroughs/bronx', to: "boroughs#bronx", as: "bronx"
+  get 'boroughs/brooklyn', to: "boroughs#brooklyn", as: "brooklyn"
+  get 'boroughs/statenisland', to: "boroughs#statenisland", as: "statenisland"
   get 'rating/index'
   get 'main_page/index'
   get 'bronx/index'
+  get 'search/index'
 
   root 'home#index'
   

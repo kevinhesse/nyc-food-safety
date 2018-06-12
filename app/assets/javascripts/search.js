@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
     }
   
     let ul = document.createElement("ul")
-    let divQueens = document.getElementById("flys")
+    let divQueens = document.getElementById("search")
     if (divQueens != null) {
     
     axios.get('https://data.cityofnewyork.us/resource/9w7m-hzhe.json')
@@ -51,16 +51,16 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
                 )
   
                 // ul.innerHTML = 
-                name.innerHTML = "<strong>" + resturant.name + "</strong>"
+                name.innerHTML = "Name:" + resturant.name
                 street.innerHTML = "Address: " + resturant.street + " " + resturant.boro + " " + resturant.zipcode 
                 critical.innerHTML = "Critical: " + resturant.critical
                 score.innerHTML = "Score: " + resturant.score
                 violation.innerHTML = "Violation: " + resturant.violation
-                grade.innerHTML = "grade: " + "<strong>" + resturant.grade + "</strong>"
+                grade.innerHTML = "grade: " + resturant.grade
                 // zipcode.innerHTML = "Zipcode: " + resturant.zipcode
                 
-  
-                if (data[x].violation_code == "04N") { 
+                // enter search params
+                if (data[x].zipcode == search) { 
                 
                 ul.appendChild(grade)
                 ul.appendChild(name)
