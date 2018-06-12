@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get 'rating/index'
   get 'main_page/index'
   get 'bronx/index'
-  get 'search/index'
+  get 'search/index', to: "search#index", as: "search"
 
   root 'home#index'
   
