@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
   let ul = document.createElement("ul")
   let divQueens = document.getElementById("bronx")
   if (divQueens != null) {
-    alert('bronx only')
+    
   axios.get('https://data.cityofnewyork.us/resource/9w7m-hzhe.json')
     .then((response) => {
 

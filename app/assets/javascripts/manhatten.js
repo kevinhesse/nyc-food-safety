@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
     let ul = document.createElement("ul")
     let divQueens = document.getElementById("manhatten")
     if (divQueens != null) {
-        alert("manhatten only")
+        
     axios.get('https://data.cityofnewyork.us/resource/9w7m-hzhe.json')
         .then((response) => {
 
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
                 // zipcode.innerHTML = "Zipcode: " + resturant.zipcode
                 
 
-                if (data[x].boro == "MANHATTEN") { 
+                if (data[x].boro == "MANHATTAN") { 
                 
                 ul.appendChild(grade)
                 ul.appendChild(name)

@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  get 'boroughs/manhatten'
+  get 'animals/rats'
+  get 'animals/roaches'
+  get 'animals/flys'
+  # get 'boroughs/manhatten' to 'manhatten' 
+  get 'boroughs/manhatten', to: "boroughs#manhatten", as: "manhatten"
   get 'boroughs/queens'
   get 'boroughs/bronx'
   get 'boroughs/brooklyn'

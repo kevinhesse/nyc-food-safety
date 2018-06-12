@@ -13,20 +13,20 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
             this.grade = grade
         }
     }
-
+  
     let ul = document.createElement("ul")
-    let divQueens = document.getElementById("queens")
+    let divQueens = document.getElementById("flys")
     if (divQueens != null) {
     
     axios.get('https://data.cityofnewyork.us/resource/9w7m-hzhe.json')
     .then((response) => {
-
+  
             let data = response.data
             let allData = []
-
-
+  
+  
             
-
+  
             for (let x = 0; x < data.length; x++) {
                 let body = document.querySelector("body")
                 let ul = document.createElement("ul")
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
                 let violation = document.createElement("li")
                 let zipcode = document.createElement("li")
                 let grade = document.createElement("li")
-
+  
                 let resturant = new Resturant(
                     data[x].dba,
                     data[x].boro,
@@ -49,9 +49,9 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
                     data[x].zipcode,
                     data[x].grade
                 )
-
+  
                 // ul.innerHTML = 
-                name.innerHTML = "Name:" + resturant.name
+                name.innerHTML = "<strong>" + resturant.name + "</strong>"
                 street.innerHTML = "Address: " + resturant.street + " " + resturant.boro + " " + resturant.zipcode 
                 critical.innerHTML = "Critical: " + resturant.critical
                 score.innerHTML = "Score: " + resturant.score
@@ -59,8 +59,8 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
                 grade.innerHTML = "grade: " + resturant.grade
                 // zipcode.innerHTML = "Zipcode: " + resturant.zipcode
                 
-
-                if (data[x].boro == "QUEENS") { 
+  
+                if (data[x].violation_code == "04N") { 
                 
                 ul.appendChild(grade)
                 ul.appendChild(name)
@@ -71,13 +71,18 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
             
                 body.appendChild(divQueens)
                 divQueens.appendChild(ul)
-
-
-                // console.log (data[x])
+  
+  
+                
                 }
-
+  
             }
         })
         
     }
-})
+  
+  
+  
+  
+  
+  })

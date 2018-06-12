@@ -14,9 +14,20 @@
  *= require_self
  */
 
+ body {
+  margin-bottom: 70%;
+ }
+
+ ul {
+     margin-top: 5%;
+     
+ }
  li {
-    font-size: 10px;
+    font-size: 20px;
     list-style-type: none;
+    margin-left: 15%;
+    margin-right: 15%;
+    
  }
  .boro-header { 
     text-align: center; 
@@ -27,7 +38,7 @@
      background-color: black;
     font-family: 'Zilla Slab Highlight', cursive;   
     /* text: ; */
-    font-size: 6vw;
+    font-size: 6.5vw;
  }
 
  .list-group-item {
@@ -38,5 +49,31 @@
  a {
     font-family: 'permanent marker',cursive;
     color: black;
+    font-size: 1.9vw;
  }
 
+ a:hover{
+     color: red; 
+ }
+
+ .img-thumbnail {
+  padding: 3%;
+ }
+
+ footer {
+     position: relative;
+     margin-bottom: 60px;
+ }
+
+ .center{
+     text-align: center;
+ }
+
+ body p {
+     padding-top: 25px;
+     font-weight: bold;
+     font-size: 22px;
+     font-family: 'Zilla Slab Highlight', cursive;  
+ }
+
+ 
