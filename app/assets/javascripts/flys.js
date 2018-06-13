@@ -51,20 +51,20 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
                 )
   
                 // ul.innerHTML = 
-                name.innerHTML = "<strong>" + resturant.name + "</strong>"
-                street.innerHTML = "Address: " + resturant.street + " " + resturant.boro + " " + resturant.zipcode 
+                name.innerHTML = "<strong> <br>" + resturant.name + "</strong>"
+                street.innerHTML = "<strong>" + resturant.street + " " + resturant.boro + " " + resturant.zipcode + "</strong> <br> <br>"
                 critical.innerHTML = "Critical: " + resturant.critical
-                score.innerHTML = "Score: " + resturant.score
-                violation.innerHTML = "Violation: " + resturant.violation
+                score.innerHTML = "Score: " + resturant.score + "<br> <br>"
+                violation.innerHTML = "Violation: " + resturant.violation + "<br> <br>"
                 grade.innerHTML = "grade: " + "<strong>" + resturant.grade + "</strong>"
                 // zipcode.innerHTML = "Zipcode: " + resturant.zipcode
                 
   
                 if (data[x].violation_code == "04N") { 
                 
-                ul.appendChild(grade)
                 ul.appendChild(name)
                 ul.appendChild(street)
+                ul.appendChild(grade)
                 ul.appendChild(critical)
                 ul.appendChild(score)
                 ul.appendChild(violation)

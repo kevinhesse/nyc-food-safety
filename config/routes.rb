@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'animals/rats'
-  get 'animals/roaches'
-  get 'animals/flys'
+  get 'animals/rats', to: "animals#rats", as: "rats"
+  get 'animals/roaches', to: "animals#roaches", as: "roaches"
+  get 'animals/flys', to: "animals#flys", as: "flys"
   # get 'boroughs/manhatten' to 'manhatten' 
   get 'boroughs/manhatten', to: "boroughs#manhatten", as: "manhatten"
   get 'boroughs/queens', to: "boroughs#queens", as: "queens"

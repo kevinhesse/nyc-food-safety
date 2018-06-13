@@ -1,10 +1,17 @@
 <br>
 <div class = "row justify-content-center">
 
+<%=link_to roaches_path, class: "nav-item nav-link" do %>
+  <%= image_tag("cockroach-silhouette.svg", class: "img-thumbnail bg-light", id: "roach") %>
+  <%end%>
 
-  <%= image_tag("cockroach-silhouette.svg", class: "img-thumbnail bg-light") %>
-  <%= image_tag("rat-looking-right.svg", class: "img-thumbnail bg-light ") %>
-  <%= image_tag("fly-shape.svg", class: "img-thumbnail bg-light") %>
+<%=link_to rats_path, class: "nav-item nav-link" do %>
+  <%= image_tag("rat-looking-right.svg", class: "img-thumbnail bg-light ", id: "rat") %>
+  <%end%>
+
+<%=link_to flys_path, class: "nav-item nav-link" do %>
+  <%= image_tag("fly-shape.svg", class: "img-thumbnail bg-light", id: "fly") %>
+   <%end%>
 
 </div>
 
@@ -17,12 +24,18 @@
 <div ="top">
 
 </div>
-
+<div class = "d-flex justify-content-center">
 <form action="/search/index">
-  Zip Code<br>
-  <input type="text" name="search" value=""><br>
+  Zip Code: 
+  <input type="text" name="search" value="">
   
   <input type="submit" value="Submit">
 </form>
+</div>
+
+<div class = "d-flex justify-content-center">
+<br>
+  <p>Worst Inspection Rating In NYC:</p>
+</div>
 
 <br>

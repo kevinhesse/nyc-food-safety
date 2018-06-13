@@ -8,8 +8,8 @@
     <%# google font links below %>
     <%# bootstrap link below %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
     <%= yield :javascript_includes %>
     <link href="//fonts.googleapis.com/css?family=Black+Ops+One|Bowlby+One+SC|Ceviche+One|Creepster|Faster+One|Frijole|Londrina+Outline|Montserrat+Subrayada|Ruslan+Display|Shojumaru|Zilla+Slab+Highlight|" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
@@ -24,7 +24,6 @@
 <%# secondary navbar %>
 <nav class="nav nav-pills nav-fill nav-light bg-light">
   <%=link_to manhatten_path, class: "nav-item nav-link" do %>Manhattan<%end%>
-
   <%=link_to brooklyn_path, class: "nav-item nav-link" do %>Brooklyn<%end%>
   <%=link_to queens_path, class: "nav-item nav-link" do %>Queens<%end%>
   <%=link_to bronx_path, class: "nav-item nav-link" do %>Bronx<%end%>
