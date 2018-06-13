@@ -139,7 +139,6 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
 
       let body = document.querySelector("body")
       let div = document.createElement("div")
-      // correct? ^
       let ul = document.createElement("ul")
       let a = document.createElement("li")
       let b = document.createElement("li")
@@ -187,10 +186,10 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
         // something is wrong here i need it to only return one score, it does many
         if (data[x].score > currentHighestScore) {
           currentHighestScore = data[x].score
-          return data[x].dba
+          
         }
+        console.log(currentHighestScore)
         
-        console.log(currentHighestScore + "this should be high")
       }
     }
     
@@ -198,54 +197,24 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
     
 
     // finds restaurants with perfect inspection results
-    function perfectScore() {
-      let perfectScoreName = "";
-      let perfectScore = 0;
+    // function perfectScore() {
+    //   let perfectScoreName = "";
+    //   let perfectScore = 0;
        
       
-      for (let x = 0; x < data.length; x++) {
-        if (data[x].score < 0 && data[x].score == "A") {
-        perfectScoreName = data[x].dba; 
-        perfectScore = data[x].score;
-        } 
-      }
+    //   for (let x = 0; x < data.length; x++) {
+    //     if (data[x].score < 0 && data[x].score == "A") {
+    //     perfectScoreName = data[x].dba; 
+    //     perfectScore = data[x].score;
+    //     } 
+    //   }
 
-      console.log(perfectScoreName);
-      console.log(perfectScore);
+    //   console.log(perfectScoreName);
+    //   console.log(perfectScore);
       
-    }
-    perfectScore();
+    // }
+    // perfectScore();
 
-    
-    function roachesFound() {
-      let nameWhereRoachesFound = ""
-      
-      for (let x = 0; x < data.length; x++) {
-        if (data[x].violation_code == "04M") { 
-          nameWhereRoachesFound = data[x].dba;
-        }
-        console.log(nameWhereRoachesFound + " has roaches")
-      }
-    }
-    roachesFound();
-
-    function evidenceOfMiceFound() {
-      let nameWhereMiceFound = ""
-
-      for (let x = 0; x < data.length; x ++) { 
-        if (data[x].violation_code == "04L") {
-          nameWhereMiceFound = data[x].dba;
-        }
-        console.log(nameWhereMiceFound + "has mice")
-      }
-    }
-    evidenceOfMiceFound()
-
-    
-    
-    
-    
-    
   })
 }
 })

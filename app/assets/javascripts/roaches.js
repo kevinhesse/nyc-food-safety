@@ -50,14 +50,12 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
                     data[x].grade
                 )
   
-                // ul.innerHTML = 
-                name.innerHTML = "Name:" + resturant.name
-                street.innerHTML = "Address: " + resturant.street + " " + resturant.boro + " " + resturant.zipcode 
+                name.innerHTML = "<strong> <br>" + resturant.name + "</strong>"
+                street.innerHTML = "<strong>" + resturant.street + " " + resturant.boro + " " + resturant.zipcode + "</strong> <br> <br>"
                 critical.innerHTML = "Critical: " + resturant.critical
-                score.innerHTML = "Score: " + resturant.score
-                violation.innerHTML = "Violation: " + resturant.violation
-                grade.innerHTML = "grade: " + resturant.grade
-                // zipcode.innerHTML = "Zipcode: " + resturant.zipcode
+                score.innerHTML = "Score: " + resturant.score + "<br> <br>"
+                violation.innerHTML = "Violation: " + resturant.violation + "<br> <br>"
+                grade.innerHTML = "grade: " + "<strong>" + resturant.grade + "</strong>"
                 
   
                 if (data[x].violation_code == "04M") { 

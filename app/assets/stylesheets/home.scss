@@ -15,5 +15,15 @@ body  {
 font-family: ZillaSlabHighlight; 
 }
 
+@keyframes fadein {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 30%
+    }
+
+}
+
 
 

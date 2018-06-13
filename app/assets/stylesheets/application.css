@@ -19,10 +19,6 @@
   background-color: #f8f8f8;
  }
 
- ul {
-     margin-top: 5%;
-     
- }
  li {
     font-size: 20px;
     list-style-type: none;
@@ -53,6 +49,7 @@
     font-family: 'permanent marker',cursive;
     color: black;
     font-size: 1.9vw;
+
  }
 
  a:hover{
@@ -74,6 +71,7 @@
 
  }
 
+
  footer {
      position: relative;
      margin-bottom: 60px;
@@ -92,7 +90,7 @@
 
  ul {
     margin-top: 5%;
-    background-color: #F8F9FA;
+    background-color: #F8F8F8;
     padding: -100;
 }
 
