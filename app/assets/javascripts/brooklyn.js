@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', domContentLoadedEvent => {
 
                 name.innerHTML = "<strong> <br>" + resturant.name + "</strong>"
                 street.innerHTML = "<strong>" + resturant.street + " " + resturant.boro + " " + resturant.zipcode + "</strong> <br> <br>"
-                critical.innerHTML = "Critical: " + resturant.critical
+                critical.innerHTML = "Status: " + resturant.critical
                 score.innerHTML = "Score: " + resturant.score + "<br> <br>"
                 violation.innerHTML = "Violation: " + resturant.violation + "<br> <br>"
                 grade.innerHTML = "grade: " + "<strong>" + resturant.grade + "</strong>"
