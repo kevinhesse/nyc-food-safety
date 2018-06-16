@@ -53,7 +53,8 @@
  }
 
  a:hover{
-     color: red; 
+     color:red; 
+     animation: fadein .5s forwards;
  }
 
  .img-thumbnail {
@@ -131,6 +132,11 @@
     padding: 50px;
 }
  
+#fly:hover {
+animation: 2s;
+color: green;
+} 
+
 li {
     background-color: #f5f5f5;
     padding-left: 8%;
@@ -144,4 +150,11 @@ li {
     margin-left: 10%;
     margin-right: 15%;
     /* border: .2px solid rgb(189, 189, 189); */
+}
+
+@keyframes fadein {
+    from {opacity: 1;}
+    
+    to { opacity: .75;}
+
 }
