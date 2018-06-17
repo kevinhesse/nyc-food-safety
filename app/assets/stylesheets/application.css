@@ -54,7 +54,7 @@
 
  a:hover{
      color:red; 
-     animation: fadein .5s forwards;
+     animation: fadein forwards;
  }
 
  .img-thumbnail {
