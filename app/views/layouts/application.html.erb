@@ -14,7 +14,7 @@
     <link href="//fonts.googleapis.com/css?family=Black+Ops+One|Bowlby+One+SC|Ceviche+One|Creepster|Faster+One|Frijole|Londrina+Outline|Montserrat+Subrayada|Ruslan+Display|Shojumaru|Zilla+Slab+Highlight|" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <%# favicon %>
-    <link rel="shortcut icon" href="/cockroach-silhouette.svg" type="image/x-icon">
+    <%= favicon_link_tag 'cockroach-silhouette.svg' %>
   </head>
 
   <body>
@@ -30,28 +30,10 @@
   <%=link_to queens_path, class: "nav-item nav-link" do %>Queens<%end%>
   <%=link_to bronx_path, class: "nav-item nav-link" do %>Bronx<%end%>
   <%=link_to statenisland_path, class: "nav-item nav-link" do %>Staten Island<%end%>
-
-  <%# <a class="nav-item nav-link" href="boroughs/brooklyn">Brooklyn</a>
-  <a class="nav-item nav-link" href="queens">Queens</a>
-  <a class="nav-item nav-link" href="bronx">Bronx</a>
-  <a class="nav-item nav-link" href="statenisland">Staten Island</a> %>
 </nav>
-
-<%# <div class="card bg-dark text-white">
-  <img class="card-img" src="sykline-bar.jpeg" alt="Card image">
-  <div class="card-img-overlay">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Search by zipcode to see current health inspection details</p>
-    <p class="card-text">Information updated Daily</p>
-  </div>
-</div> %>
-
-
-
 
 
     <%= yield %>
-
 
 
 <%# axios link below %>
